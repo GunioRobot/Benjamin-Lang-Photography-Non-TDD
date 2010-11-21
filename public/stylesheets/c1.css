@@ -1,0 +1,54 @@
+body {
+color: #10222B;
+background-color: #F6FFE0;
+}
+
+/* Begin DIV styles */
+
+div#logo_container {
+	color: inherit;
+	background-color: inherit;
+}
+
+div.nav_container {
+	color: #10222B;
+	background-color: inherit;
+}
+
+div#top_nav_container, div#side_nav_container {
+	border-color: #95AB63;
+}
+
+div.photo_container {
+	color: inherit;
+	background-color: #10222B;
+}
+
+/* End DIV styles */
+
+/* Begin text color styles */
+
+.white_text {
+	color: #E2F0D6;
+	background-color: inherit;
+}
+
+.black_bkg {
+ color: #95AB63;
+ background-color: #10222B;
+}
+
+/* End text color styles */
+
+/* Begin A styles */
+
+a {
+	color: inherit;
+	background-color: inherit;
+}
+a.nav_a:hover {
+	color: #BDD684;
+	background-color: inherit;
+}
+
+/* End A styles */

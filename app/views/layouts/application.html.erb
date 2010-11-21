@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blp</title>
+  <%= stylesheet_link_tag "layout", "c1" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<div id="body_wrap">
+		<div id="logo_container">
+			<span class="black_bkg" id="logo_text">benjamin<span class="white_text">lang</span>photography</span>
+		</div>
+		<div id="top_nav_container" class="nav_container">
+			<ul id="top_nav_list">
+				<li>
+					<a href="#" class="nav_a">film</a>
+				</li>
+				<li>
+					<a href="#" class="nav_a">digital</a>
+				</li>
+				<li>
+					<a href="#" class="nav_a">blog</a>
+				</li>
+				<li>
+					<a href="#" class="nav_a">about</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content_wrap">
+			<div id="main_content_container">
+				<%= yield %>
+			</div>
+			<div id="side_nav_container" class="nav_container">
+				<ul id="side_nav_list">
+					<li>
+						<a href="#" class="nav_a">proj a</a>
+					</li>
+					<li>	
+						<a href="#" class="nav_a">proj b</a>
+					</li>
+					<li>
+						<a href="#" class="nav_a">proj c</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

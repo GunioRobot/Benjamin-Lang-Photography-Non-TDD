@@ -1,0 +1,100 @@
+body {
+	font-family: Verdana;
+}
+
+/* Begin DIV styles */
+
+div#body_wrap {
+	display: table;
+}
+
+div#logo_container {
+	font-family: Helvetica;
+	font-size: 1.5em;
+	letter-spacing: 0.25em;
+	font-weight: 400;
+}
+
+#logo_text {
+	padding: 0.5em;
+}
+
+div.nav_container {
+	background-color: inherit;
+	font-family: Hei;
+	vertical-align: top;
+}
+
+div#content_wrap {
+	display: table;
+	margin-left: 0.5em;
+	height: 25.375em;
+}
+
+div#top_nav_container {
+	margin: 2em 0 0 0.5em;
+	border-bottom: thin solid;
+	padding: 0 0 0.25em 0;
+	width: 39.75em;
+}
+
+div#side_nav_container {
+	display: table-cell;
+	border-left: thin solid;
+	padding: 1em 0 0 0.5em;
+	width: 4em;
+}
+
+div#main_content_container {
+	font-size: 0.90em;
+	letter-spacing: 0.1em;
+	display: table-cell;
+	padding: 1.25em 1.25em 0 0;
+	vertical-align: top;
+	width: 528px;
+}
+
+div#photo_numbers {
+	text-align: center;
+}
+
+/* End DIV styles */
+
+/* Begin A styles */
+
+a {
+	text-decoration: none;
+}
+
+div#top_nav_container > a.nav_a {
+	margin-right: 2em;
+}
+
+/* End A styles */
+
+/* Begin Side Nav List Styles */
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+ul#side_nav_list > li {
+	padding: 0 0 0.5em 0;
+}
+
+ul#top_nav_list > li {
+	display: inline-block;
+	margin-right: 3em;
+}
+
+/* End Side Nav List Styles */
+
+/* Begin IMG Styles */
+
+img.photo {
+	border: 1em solid;
+}
+
+/* End IMG Styles */
