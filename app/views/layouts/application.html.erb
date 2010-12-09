@@ -12,18 +12,11 @@
 		</div>
 		<div id="top_nav_container" class="nav_container">
 			<ul id="top_nav_list">
+			<% @PT.each do |type| %>
 				<li>
-					<a href="#" class="nav_a">film</a>
+					<%= link_to type.name, "#" %>
 				</li>
-				<li>
-					<a href="#" class="nav_a">digital</a>
-				</li>
-				<li>
-					<a href="#" class="nav_a">blog</a>
-				</li>
-				<li>
-					<a href="#" class="nav_a">about</a>
-				</li>
+			<% end %>
 			</ul>
 		</div>
 		<div id="content_wrap">
