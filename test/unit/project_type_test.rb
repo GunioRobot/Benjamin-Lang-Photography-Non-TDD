@@ -9,7 +9,7 @@ class ProjectTypeTest < ActiveSupport::TestCase
   	newType = ProjectType.create(:name => nil)
   	assert !newType.errors[:name].empty?
   end
-  test "First ProjectType has photos" do
-  	#assert ProjectType.first.projects
+  test "First ProjectType has Projects" do
+  	assert ProjectType.first.respond_to?(:projects)
   end
 end

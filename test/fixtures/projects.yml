@@ -2,16 +2,16 @@
 
 proj_one:
   name: "film project a"
-  project_type: one
+  project_type: film
 
 proj_two:
   name: "digital project a"
-  project_type: two
+  project_type: digital
   
 proj_three:
   name: "film project b"
-  project_type: one
+  project_type: film
   
 proj_four:
   name: "digital project b"
-  project_type: two
+  project_type: digital
