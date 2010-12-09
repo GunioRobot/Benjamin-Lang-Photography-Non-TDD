@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: "film project a"
+  project_type_id: 3
+
+two:
+  name: "digital project a"
+  project_type_id: 4
+  
+three:
+  name: "film project b"
+  project_type_id: 3
+  
+four:
+  name: "digital project b"
+  project_type_id: 4
