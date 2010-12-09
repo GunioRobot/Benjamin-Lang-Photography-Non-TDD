@@ -6,7 +6,7 @@ class ProjectTypeTest < ActiveSupport::TestCase
     assert one.name
   end
   test "Attempt to save a Project type without a name" do
-  	newType = ProjectType.new(:name => nil)
-  	assert !newType.save
+  	newType = ProjectType.create(:name => nil)
+  	assert !newType.errors[:name].empty?
   end
 end
