@@ -1,17 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+proj_one:
   name: "film project a"
-  project_type_id: 3
+  project_type: one
 
-two:
+proj_two:
   name: "digital project a"
-  project_type_id: 4
+  project_type: two
   
-three:
+proj_three:
   name: "film project b"
-  project_type_id: 3
+  project_type: one
   
-four:
+proj_four:
   name: "digital project b"
-  project_type_id: 4
+  project_type: two
