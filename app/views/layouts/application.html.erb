@@ -14,28 +14,13 @@
 			<ul id="top_nav_list">
 			<% @PT.each do |project_type| %>
 				<li>
-					<%= link_to project_type.name, "#" %>
+					<%= link_to project_type.name, "#", :class => 'nav_a' %>
 				</li>
 			<% end %>
 			</ul>
 		</div>
 		<div id="content_wrap">
-			<div id="main_content_container">
-				<%= yield %>
-			</div>
-			<div id="side_nav_container" class="nav_container">
-				<ul id="side_nav_list">
-					<li>
-						<a href="#" class="nav_a">proj a</a>
-					</li>
-					<li>	
-						<a href="#" class="nav_a">proj b</a>
-					</li>
-					<li>
-						<a href="#" class="nav_a">proj c</a>
-					</li>
-				</ul>
-			</div>
+			<%= yield %>
 		</div>
 	</div>
 </body>

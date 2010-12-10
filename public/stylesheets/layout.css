@@ -35,14 +35,14 @@ div#top_nav_container {
 	margin: 2em 0 0 0.5em;
 	border-bottom: thin solid;
 	padding: 0 0 0.25em 0;
-	width: 39.75em;
+	min-width: 39.75em;
 }
 
 div#side_nav_container {
 	display: table-cell;
 	border-left: thin solid;
 	padding: 1em 0 0 0.5em;
-	width: 4em;
+	min-width: 4em;
 }
 
 div#main_content_container {
