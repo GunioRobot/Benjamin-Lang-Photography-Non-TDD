@@ -8,13 +8,13 @@
 <body>
 	<div id="body_wrap">
 		<div id="logo_container">
-			<span class="black_bkg" id="logo_text">benjamin<span class="white_text">lang</span>photography</span>
+			<a href="/"><span class="black_bkg" id="logo_text">benjamin<span class="white_text">lang</span>photography</span></a>
 		</div>
 		<div id="top_nav_container" class="nav_container">
 			<ul id="top_nav_list">
 			<% @PT.each do |project_type| %>
 				<li>
-					<%= link_to project_type.name, "#", :class => 'nav_a' %>
+					<%= link_to project_type.name, '/' + project_type.name, :class => 'nav_a' %>
 				</li>
 			<% end %>
 			</ul>
