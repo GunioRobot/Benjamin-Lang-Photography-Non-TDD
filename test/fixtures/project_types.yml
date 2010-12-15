@@ -2,6 +2,8 @@
 
 film:
   name: film
+  display_order: 0
 
 digital:
   name: digital
+  display_order: 1

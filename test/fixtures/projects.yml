@@ -3,15 +3,19 @@
 proj_one:
   name: "film project a"
   project_type: film
+  display_order: 0
 
 proj_two:
   name: "digital project a"
   project_type: digital
+  display_order: 1
   
 proj_three:
   name: "film project b"
   project_type: film
+  display_order: 2
   
 proj_four:
   name: "digital project b"
   project_type: digital
+  display_order: 3
