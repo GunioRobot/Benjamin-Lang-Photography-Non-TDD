@@ -2,7 +2,7 @@
 </div>
 <div id="side_nav_container" class="nav_container">
 	<ul id="side_nav_list">
-		<% @type.projects.each do |project| %>
+		<% @projs.each do |project| %>
 			<li>
 				<%= link_to project.name, '#', :class => 'nav_a' %>
 			</li>

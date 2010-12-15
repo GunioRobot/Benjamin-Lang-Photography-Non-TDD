@@ -12,7 +12,7 @@
 		</div>
 		<div id="top_nav_container" class="nav_container">
 			<ul id="top_nav_list">
-			<% @PT.each do |project_type| %>
+			<% @PTs.each do |project_type| %>
 				<li>
 					<%= link_to project_type.name, '/' + project_type.name, :class => 'nav_a' %>
 				</li>
