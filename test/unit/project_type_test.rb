@@ -10,7 +10,7 @@ class ProjectTypeTest < ActiveSupport::TestCase
   	assert ProjectType.first.respond_to?(:projects)
   end
   test "First ProjectType has a display_order" do
-    #assert_not_nil ProjectType.first.display_order
+    assert_not_nil ProjectType.first.display_order
   end
   
 	# Tests regarding adding new ProjectType entries
