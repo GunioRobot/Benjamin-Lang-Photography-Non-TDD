@@ -1,10 +1,14 @@
 Blp::Application.routes.draw do
+  get "projects/show"
+
   get "project_types/show"
 
   get "home/index"
   root :to => 'home#index'
   
-  match '/:name', :to => 'project_types#show'
+  resources :projects
+  
+  match '/:name' => 'project_types#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

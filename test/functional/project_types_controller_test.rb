@@ -21,6 +21,5 @@ class ProjectTypesControllerTest < ActionController::TestCase
   			assert_select 'a.nav_a'
   		end
   	end
-
   end
 end
