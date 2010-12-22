@@ -10,7 +10,7 @@ class ProjectTest < ActiveSupport::TestCase
   	assert_not_nil Project.first.project_type_id
   end
   test "First Project has a display_order" do
-    #assert_not_nil Project.first.display_order
+    assert_not_nil Project.first.display_order
   end
   
 	# Tests regarding adding new Project entries
