@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+photo_one:
+  title: PhotoOneTitle
+  img_url: /photos/1/testurl.jpg
+  display_order: 0
+  project: proj_one
+
+photo_two:
+  title: PhotoTwoTitle
+  img_url: /photos/2/testurl.jpg
+  display_order: 1
+  project: proj_two
+  
+photo_three:
+  title: PhotoThreeTitle
+  img_url: /photos/3/testurl.jpg
+  display_order: 2
+  project: proj_one
+  
+photo_four:
+  title: PhotoFourTitle
+  img_url: /photos/4/testurl.jpg
+  display_order: 3
+  project: proj_two
