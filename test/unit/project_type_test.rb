@@ -6,7 +6,7 @@ class ProjectTypeTest < ActiveSupport::TestCase
   test "First ProjectType has a name" do
     assert_not_nil ProjectType.first.name
   end
-  test "First ProjectType has Projects" do
+  test "First ProjectType has_many Projects" do
   	assert ProjectType.first.respond_to?(:projects)
   end
   test "First ProjectType has a display_order" do

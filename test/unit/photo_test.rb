@@ -6,11 +6,33 @@ class PhotoTest < ActiveSupport::TestCase
   test "First Photo has a title" do
     assert_not_nil Photo.first.title
   end
-  test "First Photo has a Project" do
+  test "First Photo belongs_to a Project" do
   	assert_not_nil Photo.first.project_id
   end
   test "First Photo has a display_order" do
     assert_not_nil Photo.first.display_order
   end
   
+  # Tests regarding adding new Photo entries
+  proj_one_id = Fixtures.identify(:proj_one)
+  
+  test "Adding a new Photo without a title should fail" do
+  	next_display_order = Photo.find(:first, :order => 'display_order DESC').display_order+1
+  	new = Photo.create(:title => nil, :img_url => '/photos/new/testurl.jpg', :display_order => next_display_order, :project => Project.find(proj_one_id))
+  	assert !new.errors[:title].empty?
+  end
+  test "Adding a new Photo without a display_order should fail" do
+  	new = Photo.create(:title => 'newPhotoTitle', :img_url => '/photos/new/testurl.jpg', :display_order => nil, :project => Project.find(proj_one_id))
+  	assert !new.errors[:display_order].empty?
+  end
+  test "Adding a new Photo without a Project should fail" do
+  	next_display_order = Photo.find(:first, :order => 'display_order DESC').display_order+1
+  	new = Photo.create(:title => 'newPhotoTitle', :img_url => '/photos/new/testurl.jpg', :display_order => next_display_order, :project => nil)
+  	assert !new.errors[:project_id].empty?
+  end
+  test "Adding a new Photo without an img_url should fail" do
+  	next_display_order = Photo.find(:first, :order => 'display_order DESC').display_order+1
+  	new = Photo.create(:title => 'newPhotoTitle', :img_url => nil, :display_order => next_display_order, :project => Project.find(proj_one_id))
+  	assert !new.errors[:img_url].empty?
+  end
 end
