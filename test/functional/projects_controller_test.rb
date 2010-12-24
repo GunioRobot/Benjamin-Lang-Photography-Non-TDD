@@ -1,9 +1,11 @@
 require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase
-  proj_one_id = Fixtures.identify(:proj_one)
   test "should get show" do
-    get(:show, {:id => proj_one_id})
-    assert_response :success
+  	proj = projects(:proj_one)
+    get(:show, {:id => proj.id})
+    assert_redirected_to project_photo_path(proj,proj.photos.find(:first,:order => 'display_order'))
+    assert_response :redirect
   end
+  
 end
