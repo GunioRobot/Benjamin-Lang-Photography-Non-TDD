@@ -19,3 +19,8 @@ proj_four:
   name: "digital project b"
   project_type: digital
   display_order: 3
+  
+empty_proj:
+  name: "empty film project"
+  project_type: film
+  display_order: 4

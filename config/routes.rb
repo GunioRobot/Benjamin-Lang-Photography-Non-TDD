@@ -1,12 +1,16 @@
 Blp::Application.routes.draw do
-  get "projects/show"
+  get "photos/show"
+
+  get "projects/show", "projects/empty"
 
   get "project_types/show"
 
   get "home/index"
   root :to => 'home#index'
   
-  resources :projects
+  resources :projects do
+  	resources :photos
+  end
   
   match '/:name' => 'project_types#show'
 
