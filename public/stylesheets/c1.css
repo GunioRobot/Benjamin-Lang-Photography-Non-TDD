@@ -5,7 +5,7 @@ background-color: #F6FFE0;
 
 /* Begin DIV styles */
 
-div#logo_container {
+div#logo_container, .prev_next {
 	color: inherit;
 	background-color: inherit;
 }
@@ -33,10 +33,12 @@ div.photo_container {
 	background-color: inherit;
 }
 
-.black_bkg {
- color: #95AB63;
- background-color: #10222B;
+.black_bkg, a.prev_next:hover {
+	color: #95AB63;
+	background-color: #10222B;
 }
+
+/* .prev_next -> div#logo_container */
 
 /* End text color styles */
 
@@ -50,5 +52,7 @@ a.nav_a:hover {
 	color: #BDD684;
 	background-color: inherit;
 }
+
+/* a.prev_next:hover -> .black_bkg */
 
 /* End A styles */

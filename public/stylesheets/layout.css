@@ -70,6 +70,10 @@ div#top_nav_container > a.nav_a {
 	margin-right: 2em;
 }
 
+a.selected_a {
+	font-weight: bold;
+}
+
 /* End A styles */
 
 /* Begin Side Nav List Styles */
