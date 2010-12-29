@@ -15,11 +15,11 @@ class PhotoTest < ActiveSupport::TestCase
   
   # Tests regarding adding new Photo entries
   
-  test "Adding a new Photo without a title should fail" do
+  test "Adding a new Photo without a title should NOT fail" do
   	proj_one = projects(:proj_one)
   	next_display_order = Photo.find(:first, :order => 'display_order DESC').display_order+1
   	new = Photo.create(:title => nil, :img_url => '/photos/new/testurl.jpg', :display_order => next_display_order, :project => proj_one)
-  	assert !new.errors[:title].empty?
+  	assert new.errors[:title].empty?
   end
   test "Adding a new Photo without a display_order should fail" do
   	proj_one = projects(:proj_one)
