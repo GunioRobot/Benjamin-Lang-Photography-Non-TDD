@@ -5,5 +5,5 @@ class ProjectsController < ApplicationController
   		redirect_to project_photo_path(@proj,@proj.photos.find(:first, :order => 'display_order'))
   	end
   end
-
+  
 end

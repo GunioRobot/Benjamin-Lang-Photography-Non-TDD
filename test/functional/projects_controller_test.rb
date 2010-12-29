@@ -12,5 +12,22 @@ class ProjectsControllerTest < ActionController::TestCase
   	get(:show, {:id => proj.id})
   	assert_response :success
   end
-  
+  test "should display links to this Project's ProjectType's Projects in the side navigation" do
+  	proj = projects(:empty_proj)
+    get(:show, {:id => proj.id})
+  	assert_select 'ul#side_nav_list' do
+  		assert_select 'li' do
+  			assert_select 'a.nav_a'
+  		end
+  	end
+  end
+  test "should select the Project name in the side_nav" do
+  	proj = projects(:empty_proj)
+    get(:show, {:id => proj.id})
+  	assert_select 'ul#side_nav_list' do
+  		assert_select 'li' do
+  			assert_select 'a.nav_a.selected_a', {:count => 1, :text => proj.name}
+  		end
+  	end
+  end
 end

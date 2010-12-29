@@ -1,2 +1,5 @@
-<h1>Photos#show</h1>
-<p>Find me in app/views/photos/show.html.erb</p>
+<div id="main_content_container">
+	<h1>Photos#show</h1>
+	<p>Find me in app/views/photos/show.html.erb</p>
+</div>
+<%= render :partial => 'shared/side_nav', :locals => { :projs => @photo.project.project_type.projects, :current_proj_id => @photo.project.id } %>

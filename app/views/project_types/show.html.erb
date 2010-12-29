@@ -1,11 +1,3 @@
 <div id="main_content_container">
 </div>
-<div id="side_nav_container" class="nav_container">
-	<ul id="side_nav_list">
-		<% @projs.each do |project| %>
-			<li>
-				<%= link_to project.name, project_path(project), :class => 'nav_a' %>
-			</li>
-		<% end %>
-	</ul>
-</div>
+<%= render :partial => 'shared/side_nav', :locals => { :projs => @projs, :current_proj_id => nil } %>
