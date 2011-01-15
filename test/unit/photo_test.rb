@@ -40,4 +40,22 @@ class PhotoTest < ActiveSupport::TestCase
   
   # Tests regarding instance methods
   
+  test "returns nil if a photo's previous photo does not exist" do
+  	photo = photos(:photo_one)
+  	assert_nil photo.prev_photo
+  end
+  test "returns the previous photo if a previous photo exists" do
+  	photo = photos(:photo_three)
+  	assert_equal photo.prev_photo, photos(:photo_one)
+  end
+  test "returns nil if a photo's next photo does not exist" do
+  	photo = photos(:photo_solo)
+  	assert_nil photo.next_photo
+  end
+  test "returns the next photo if a next photo exists" do
+  	photo = photos(:photo_one)
+  	assert_equal photo.next_photo, photos(:photo_three)
+  end
+  
+  
 end
