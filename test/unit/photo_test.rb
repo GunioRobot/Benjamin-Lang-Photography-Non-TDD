@@ -38,7 +38,7 @@ class PhotoTest < ActiveSupport::TestCase
   	assert !new.errors[:img_url].empty?
   end
   
-  # Tests regarding instance methods
+  # Tests regarding prev_photo method
   
   test "returns nil if a photo's previous photo does not exist" do
   	photo = photos(:photo_one)
@@ -48,6 +48,9 @@ class PhotoTest < ActiveSupport::TestCase
   	photo = photos(:photo_three)
   	assert_equal photo.prev_photo, photos(:photo_one)
   end
+  
+  # Tests regarding next_photo method
+  
   test "returns nil if a photo's next photo does not exist" do
   	photo = photos(:photo_solo)
   	assert_nil photo.next_photo
