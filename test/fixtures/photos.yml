@@ -21,5 +21,21 @@ photo_three:
 photo_four:
   title: PhotoFourTitle
   img_url: /photos/4/testurl.jpg
+  display_order: 6
+  project: proj_two
+  
+photo_five:
+  title: PhotoFiveTitle
+  img_url: /photos/7/testurl.jpg
   display_order: 3
   project: proj_two
+
+photo_no_title:
+  img_url: /photos/5/testurl.jpg
+  display_order: 4
+  project: proj_two
+
+photo_solo:
+  img_url: /photos/6/testurl.jpg
+  display_order: 5
+  project: proj_solo

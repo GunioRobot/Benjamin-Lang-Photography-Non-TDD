@@ -32,4 +32,15 @@ class ProjectTest < ActiveSupport::TestCase
   	new = Project.create(:name => "Project Name", :project_type => pt_film, :display_order => nil)
   	assert !new.errors[:display_order].empty?
   end
+  
+  # Tests regarding display_photos method
+  
+  test "returns the photos in a project in ordered by increasing display order" do
+  	proj = projects(:proj_two)
+  	test_array_of_photos = [photos(:photo_two),photos(:photo_five),photos(:photo_no_title),photos(:photo_four)]
+  	proj.display_photos.each_with_index do |photo, index|
+  		assert_equal photo, test_array_of_photos[index]
+  	end
+  end
+  
 end
