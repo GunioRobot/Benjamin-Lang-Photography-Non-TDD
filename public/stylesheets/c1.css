@@ -1,27 +1,27 @@
 body {
 color: #10222B;
-background-color: #F6FFE0;
+background: #F6FFE0;
 }
 
 /* Begin DIV styles */
 
-div#logo_container, .prev_next {
+#logo_container, .prev_next_a {
 	color: inherit;
-	background-color: inherit;
+	background: inherit;
 }
 
-div.nav_container {
+.nav_container {
 	color: #10222B;
-	background-color: inherit;
+	background: inherit;
 }
 
-div#top_nav_container, div#side_nav_container {
+#top_nav_container, #side_nav_container {
 	border-color: #95AB63;
 }
 
-div.photo_container {
+.photo_container {
 	color: inherit;
-	background-color: #10222B;
+	background: #10222B;
 }
 
 /* End DIV styles */
@@ -30,15 +30,15 @@ div.photo_container {
 
 .white_text {
 	color: #E2F0D6;
-	background-color: inherit;
+	background: inherit;
 }
 
-.black_bkg, a.prev_next:hover {
+.black_bkg {
 	color: #95AB63;
-	background-color: #10222B;
+	background: #10222B;
 }
 
-/* .prev_next -> div#logo_container */
+/* prev_next_a -> div#logo_container */
 
 /* End text color styles */
 
@@ -46,13 +46,13 @@ div.photo_container {
 
 a {
 	color: inherit;
-	background-color: inherit;
-}
-a.nav_a:hover {
-	color: #BDD684;
-	background-color: inherit;
+	background: inherit;
 }
 
-/* a.prev_next:hover -> .black_bkg */
+a.selected_a {
+	font-weight: bold;
+}
+
+/* a.prev_next_a:hover, a.nav_a:hover -> .black_bkg */
 
 /* End A styles */

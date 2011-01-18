@@ -1,5 +1,34 @@
 <div id="main_content_container">
-	<h1>Photos#show</h1>
-	<p>Find me in app/views/photos/show.html.erb</p>
+	<div class="photo_container">
+		<%= image_tag(@photo.img_url, :class => 'photo', :width => 500) %>
+		<% if @photo.title then %>
+			<p id="photo_title" class="white_text">
+					<%= @photo.title %>
+			</p>
+		<% end %>
+	</div>
+	<% if @photo.project.photos.length != 1 %>
+		<div id="photo_numbers_div">
+			<span id="prev" class="prev_next">
+				<% if @photo.prev_photo	%>
+					<%= link_to 'prev', project_photo_path(@photo.project, @photo.prev_photo), :class => 'prev_next_a' %>
+				<% end %>
+			</span>
+			<span id="photo_numbers_wrap">
+				<span id="current_photo_number" class="photo_numbers">
+					<%= @photo.project.display_photos.index(@photo)+1 %>
+				</span>
+				of
+				<span id="total_photo_number" class="photo_numbers">
+					<%= @photo.project.photos.length %>
+				</span>
+			</span>
+			<span id="next" class="prev_next">
+				<% if @photo.next_photo	%>
+					<%= link_to 'next', project_photo_path(@photo.project, @photo.next_photo), :class => 'prev_next_a' %>
+				<% end %>
+			</span>
+		</div>
+	<% end %>
 </div>
 <%= render :partial => 'shared/side_nav', :locals => { :projs => @photo.project.project_type.projects, :current_proj_id => @photo.project.id } %>

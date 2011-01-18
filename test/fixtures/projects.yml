@@ -24,3 +24,8 @@ empty_proj:
   name: "empty film project"
   project_type: film
   display_order: 4
+  
+proj_solo:
+  name: "solo digital project"
+  project_type: digital
+  display_order: 5
