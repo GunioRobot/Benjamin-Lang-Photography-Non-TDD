@@ -40,7 +40,7 @@ class PhotosControllerTest < ActionController::TestCase
   	photo = photos(:photo_one)
     get(:show, {:id => photo.id})
     assert_select 'div.photo_container' do
-    	assert_select 'span#photo_title', :text => photo.title
+    	assert_select 'p#photo_title', :text => photo.title
     end
   end
   test "should NOT display a title if the photo doesn't have a title" do
