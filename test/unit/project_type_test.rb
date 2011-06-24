@@ -31,4 +31,15 @@ class ProjectTypeTest < ActiveSupport::TestCase
   	newType = ProjectType.create(:name => 'new name', :display_order => nil)
   	assert !newType.errors[:display_order].empty?
   end
+  
+  # Tests regarding full_projects method
+  
+  test "All resulting projects should have no empty projects" do
+  	proj_type = project_types(:film)
+  	assert !proj_type.full_projects.empty?
+  	proj_type.full_projects.each do |proj|
+  		assert !proj.photos.empty?
+  	end
+  end
+  
 end

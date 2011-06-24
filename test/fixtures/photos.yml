@@ -29,6 +29,12 @@ photo_five:
   img_url: /photos/7/testurl.jpg
   display_order: 3
   project: proj_two
+  
+photo_six:
+  title: PhotoSixTitle
+  img_url: /photos/8/testurl.jpg
+  display_order: 7
+  project: proj_three
 
 photo_no_title:
   img_url: /photos/5/testurl.jpg

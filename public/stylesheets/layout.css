@@ -66,6 +66,22 @@ p {
 	height: 399px;
 }
 
+.thumb_container {
+	float: left;
+	padding: 0.5em;
+	width: 152px;
+	height: 113px;
+	margin: 0 0.5em;
+}
+
+#first_thumb_container {
+	margin-left: 0;
+}
+#last_thumb_container {
+	margin-right: 0;
+}
+
+
 #photo_numbers_div, .photo_container {
 	text-align: center;
 }
