@@ -1,9 +1,9 @@
 <div id="main_content_container">
-	<a href="#">
+	<%= link_to project_photo_path(@proj,@proj.photos.first) do %>
 		<div class="thumb_container" id="first_thumb_container">
 			<img class="thumb" src="../layout_images/blp_test_photo_1_th3.jpg" alt="blp_test_photo_1" width="152" height="113">
 		</div>
-	</a>
+	<% end %>
 	<a href="#">
 		<div class="thumb_container">
 			<img class="thumb" src="../layout_images/blp_test_photo_1_th3.jpg" alt="blp_test_photo_1" width="152" height="113">

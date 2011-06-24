@@ -31,4 +31,4 @@
 		</div>
 	<% end %>
 </div>
-<%= render :partial => 'shared/side_nav', :locals => { :projs => @photo.project.project_type.projects, :current_proj_id => @photo.project.id } %>
+<%= render :partial => 'shared/side_nav', :locals => { :projs => @photo.project.project_type.full_projects, :current_proj_id => @photo.project.id } %>
