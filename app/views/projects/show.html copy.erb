@@ -1,0 +1,6 @@
+<div id="main_content_container">
+	<p>
+		There are <em>definitely</em> some photos in <em><%= @proj.name %></em>.
+	</p>
+</div>
+<%= render :partial => 'shared/side_nav', :locals => { :projs => @proj.project_type.full_projects, :current_proj_id => @proj.id } %>

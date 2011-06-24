@@ -19,9 +19,13 @@ background: #F6FFE0;
 	border-color: #95AB63;
 }
 
-.photo_container {
+.photo_container, .thumb_container {
 	color: inherit;
 	background: #10222B;
+}
+.thumb_container:hover {
+	color: inherit;
+	background: #95AB63;
 }
 
 /* End DIV styles */
