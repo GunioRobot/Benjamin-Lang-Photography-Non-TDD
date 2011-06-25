@@ -5,43 +5,51 @@ photo_one:
   img_url: /photos/1/testurl.jpg
   display_order: 0
   project: proj_one
+  thumb_url: /photos/1/thumb_url.jpg
 
 photo_two:
   title: PhotoTwoTitle
   img_url: /photos/2/testurl.jpg
   display_order: 1
   project: proj_two
+  thumb_url: /photos/2/thumb_url.jpg
   
 photo_three:
   title: PhotoThreeTitle
   img_url: /photos/3/testurl.jpg
   display_order: 2
   project: proj_one
+  thumb_url: /photos/3/thumb_url.jpg
   
 photo_four:
   title: PhotoFourTitle
   img_url: /photos/4/testurl.jpg
   display_order: 6
   project: proj_two
+  thumb_url: /photos/4/thumb_url.jpg
   
 photo_five:
   title: PhotoFiveTitle
   img_url: /photos/7/testurl.jpg
   display_order: 3
   project: proj_two
+  thumb_url: /photos/7/thumb_url.jpg
   
 photo_six:
   title: PhotoSixTitle
   img_url: /photos/8/testurl.jpg
   display_order: 7
   project: proj_three
+  thumb_url: /photos/8/thumb_url.jpg
 
 photo_no_title:
   img_url: /photos/5/testurl.jpg
   display_order: 4
   project: proj_two
+  thumb_url: /photos/5/thumb_url.jpg
 
 photo_solo:
   img_url: /photos/6/testurl.jpg
   display_order: 5
   project: proj_solo
+  thumb_url: /photos/6/thumb_url.jpg
