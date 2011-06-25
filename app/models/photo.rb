@@ -3,6 +3,7 @@ class Photo < ActiveRecord::Base
   validates :img_url, :presence => true
   validates :display_order, :presence => true
   validates :project_id, :presence => true
+  validates :thumb_url, :presence => true
   
   def prev_photo
   	if self.eql?(self.project.display_photos.first)

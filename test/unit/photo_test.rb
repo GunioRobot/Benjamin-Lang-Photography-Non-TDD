@@ -12,30 +12,39 @@ class PhotoTest < ActiveSupport::TestCase
   test "First Photo has an img_url" do
   	assert_not_nil Photo.first.img_url
   end
+  test "First Photo has a thumb_url" do
+  	assert_not_nil Photo.first.thumb_url
+  end
   
   # Tests regarding adding new Photo entries
   
   test "Adding a new Photo without a title should NOT fail" do
   	proj_one = projects(:proj_one)
   	next_display_order = Photo.find(:first, :order => 'display_order DESC').display_order+1
-  	new = Photo.create(:title => nil, :img_url => '/photos/new/testurl.jpg', :display_order => next_display_order, :project => proj_one)
+  	new = Photo.create(:title => nil, :img_url => '/photos/new/testurl.jpg', :display_order => next_display_order, :project => proj_one, :thumb_url => '/photos/new/thumb_url.jpg')
   	assert new.errors[:title].empty?
   end
   test "Adding a new Photo without a display_order should fail" do
   	proj_one = projects(:proj_one)
-  	new = Photo.create(:title => 'newPhotoTitle', :img_url => '/photos/new/testurl.jpg', :display_order => nil, :project => proj_one)
+  	new = Photo.create(:title => 'newPhotoTitle', :img_url => '/photos/new/testurl.jpg', :display_order => nil, :project => proj_one, :thumb_url => '/photos/new/thumb_url.jpg')
   	assert !new.errors[:display_order].empty?
   end
   test "Adding a new Photo without a Project should fail" do
   	next_display_order = Photo.find(:first, :order => 'display_order DESC').display_order+1
-  	new = Photo.create(:title => 'newPhotoTitle', :img_url => '/photos/new/testurl.jpg', :display_order => next_display_order, :project => nil)
+  	new = Photo.create(:title => 'newPhotoTitle', :img_url => '/photos/new/testurl.jpg', :display_order => next_display_order, :project => nil, :thumb_url => '/photos/new/thumb_url.jpg')
   	assert !new.errors[:project_id].empty?
   end
   test "Adding a new Photo without an img_url should fail" do
   	proj_one = projects(:proj_one)
   	next_display_order = Photo.find(:first, :order => 'display_order DESC').display_order+1
-  	new = Photo.create(:title => 'newPhotoTitle', :img_url => nil, :display_order => next_display_order, :project => proj_one)
+  	new = Photo.create(:title => 'newPhotoTitle', :img_url => nil, :display_order => next_display_order, :project => proj_one, :thumb_url => '/photos/new/thumb_url.jpg')
   	assert !new.errors[:img_url].empty?
+  end
+  test "Adding a new Photo without an thumb_url should fail" do
+  	proj_one = projects(:proj_one)
+  	next_display_order = Photo.find(:first, :order => 'display_order DESC').display_order+1
+  	new = Photo.create(:title => 'newPhotoTitle', :img_url => '/photos/new/testurl.jpg', :display_order => next_display_order, :project => proj_one, :thumb_url => nil)
+  	assert !new.errors[:thumb_url].empty?
   end
   
   # Tests regarding prev_photo method
