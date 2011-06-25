@@ -72,12 +72,13 @@ p {
 	width: 152px;
 	height: 113px;
 	margin: 0 0.5em;
+	margin-bottom: 1em;
 }
 
-#first_thumb_container {
+.first_thumb {
 	margin-left: 0;
 }
-#last_thumb_container {
+.last_thumb {
 	margin-right: 0;
 }
 

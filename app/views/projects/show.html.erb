@@ -1,8 +1,8 @@
 <div id="main_content_container">
-<% @proj.photos.each do |photo| %>
-	<%= link_to project_photo_path(@proj,photo) do %>
-		<div class="thumb_container" id="first_thumb_container">
-			<img class="thumb" src="../layout_images/blp_test_photo_1_th3.jpg" alt="blp_test_photo_1" width="152" height="113">
+<% @proj.photos.each_with_index do |photo, photo_index| %>
+	<%= link_to project_photo_path(@proj,photo.id) do %>
+		<div class="<%= @thumb_classes[photo_index.divmod(3)[1]] %>">
+			<%= image_tag(photo.thumb_url, :alt => photo.title, :class => 'thumb', :width => 152, :height => 113) %>
 		</div>
 	<% end %>
 <% end %>

@@ -1,6 +1,6 @@
 <div id="main_content_container">
 	<div class="photo_container">
-		<%= image_tag(@photo.img_url, :class => 'photo', :width => 500) %>
+		<%= image_tag(@photo.img_url, :alt => @photo.title, :class => 'photo', :width => 500) %>
 		<% if @photo.title then %>
 			<p id="photo_title" class="white_text">
 					<%= @photo.title %>
