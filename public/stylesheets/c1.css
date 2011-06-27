@@ -40,8 +40,16 @@ background: #F6FFE0;
 	color: #95AB63;
 }
 
+.black_text {
+	color: #10222B;
+}
+
 .black_bkg {
 	background: #10222B;
+}
+
+.green_bkg {
+	background: #95AB63;
 }
 
 /* prev_next_a -> div#logo_container */
