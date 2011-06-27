@@ -34,11 +34,13 @@ background: #F6FFE0;
 
 .white_text {
 	color: #E2F0D6;
-	background: inherit;
+}
+
+.green_text {
+	color: #95AB63;
 }
 
 .black_bkg {
-	color: #95AB63;
 	background: #10222B;
 }
 
