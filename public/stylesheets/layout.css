@@ -8,6 +8,11 @@ p {
 	margin: 0;
 }
 
+/* Basic Display Styles */
+
+.hidden {
+	visibility: hidden;
+}
 
 /* Begin DIV styles */
 
