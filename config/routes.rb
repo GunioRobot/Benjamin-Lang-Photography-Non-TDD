@@ -12,6 +12,12 @@ Blp::Application.routes.draw do
   	resources :photos
   end
   
+  namespace :admin do
+  	resources :projects do
+  		resources :photos
+  	end
+  end
+  
   match '/:name' => 'project_types#show'
 
   # The priority is based upon order of creation:
