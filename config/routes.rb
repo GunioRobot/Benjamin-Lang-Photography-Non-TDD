@@ -13,9 +13,7 @@ Blp::Application.routes.draw do
   end
   
   namespace :admin do
-  	resources :projects do
-  		resources :photos
-  	end
+  	resources :projects
   end
   
   match '/:name' => 'project_types#show'
