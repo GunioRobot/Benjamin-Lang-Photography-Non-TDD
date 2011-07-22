@@ -1,9 +1,18 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
+gem 'rails', '3.1.0.rc4'
+
+# Rails 3.1 - Asset Pipeline
+gem 'json'
+gem 'sass'
+gem 'coffee-script'
+gem 'uglifier'
+# Rails 3.1 - JavaScript
+gem 'jquery-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
