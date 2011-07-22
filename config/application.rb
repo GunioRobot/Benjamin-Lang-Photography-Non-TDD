@@ -38,5 +38,12 @@ module Blp
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    # Enable the asset pipeline
+		config.assets.enabled = true
+       
+		# Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
+		config.assets.precompile += %w( admin/application.js admin/application.css )
+    
   end
 end
