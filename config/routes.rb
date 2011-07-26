@@ -17,6 +17,7 @@ Blp::Application.routes.draw do
   end
   
   match '/:name' => 'project_types#show'
+  match '/admin/:name' => 'admin/project_types#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

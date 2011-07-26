@@ -1,0 +1,10 @@
+<div id="main_content_container">
+<% @proj.photos.each_with_index do |photo, photo_index| %>
+	<%= link_to project_photo_path(@proj,photo.id) do %>
+		<div class="<%= @thumb_classes[photo_index.divmod(3)[1]] %>">
+			<%= image_tag(photo.thumb_url, :alt => photo.title, :class => 'thumb', :width => 152, :height => 113) %>
+		</div>
+	<% end %>
+<% end %>
+</div>
+<%= render :partial => 'admin/shared/side_nav', :locals => { :projs => @proj.project_type.projects, :current_proj_id => @proj.id } %>

@@ -1,0 +1,10 @@
+<div id="side_nav_container" class="nav_container">
+	<ul id="side_nav_list">
+		<% projs.each do |project| %>
+			<% a_class = project.id.equal?(current_proj_id) ? 'nav_a selected_a' : 'nav_a' %>
+			<li>
+				<%= link_to project.name, admin_project_path(project), :class => a_class %>
+			</li>
+		<% end %>
+	</ul>
+</div>
