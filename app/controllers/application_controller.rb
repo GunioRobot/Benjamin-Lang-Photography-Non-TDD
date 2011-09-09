@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
   before_filter :get_project_types
   
   def get_project_types
-  	@PTs= ProjectType.find(:all, :order => 'display_order')
+  	@PTs = ProjectType.find(:all, :order => 'display_order')
   end
 end
