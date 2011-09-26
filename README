@@ -6,7 +6,7 @@ ryan@ryanalane.com
 @ryan_a_lane
 about.me/ryanalane
 
-This README was published September 8th, 2011.
+This README was published September 25th, 2011.
 
 Rails Version: 3.1.0
 Dependencies: SASS-Rails, CoffeeSCript, Uglifier, Jquery-Rails
@@ -14,3 +14,6 @@ Dependencies: SASS-Rails, CoffeeSCript, Uglifier, Jquery-Rails
 Benjamin Lang Photography is a simple rails app for managing  a photography portfolio. It is currently being developed for a photographer friend of mine (Ben Lang), but the eventual goal is to generalize it as a light-weight portfolio CMS.
 
 This project also serves as a sandbox for getting familiar with Rails development, associated technologies (CoffeeScript, SASS, etc.), and building a project to production.
+
+A static version of the site may be viewed at:
+ryanalane.com/blp/static
