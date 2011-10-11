@@ -1,4 +1,4 @@
-Benjamin Lang Photography README
+Benjamin Lang Photography (Non-TDD) README
 
 Developed by:
 Ryan Lane
@@ -6,10 +6,12 @@ ryan@ryanalane.com
 @ryan_a_lane
 about.me/ryanalane
 
-This README was published September 25th, 2011.
+This README was published October 11th, 2011.
 
-Rails Version: 3.1.0
+Rails Version: 3.1.1
 Dependencies: SASS-Rails, CoffeeSCript, Uglifier, Jquery-Rails
+
+Work on this version of the project has been stopped, and all further efforts will be put toward "Benjamin Lang Photography" proper, to be developed according to TDD methods.
 
 Benjamin Lang Photography is a simple rails app for managing  a photography portfolio. It is currently being developed for a photographer friend of mine (Ben Lang), but the eventual goal is to generalize it as a light-weight portfolio CMS.
 
