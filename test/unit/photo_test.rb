@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PhotoTest < ActiveSupport::TestCase
   # Tests regarding existing Photo entries
-  
+
   test "First Photo belongs_to a Project" do
   	assert_not_nil Photo.first.project_id
   end
@@ -15,9 +15,9 @@ class PhotoTest < ActiveSupport::TestCase
   test "First Photo has a thumb_url" do
   	assert_not_nil Photo.first.thumb_url
   end
-  
+
   # Tests regarding adding new Photo entries
-  
+
   test "Adding a new Photo without a title should NOT fail" do
   	proj_one = projects(:proj_one)
   	next_display_order = Photo.find(:first, :order => 'display_order DESC').display_order+1
@@ -46,9 +46,9 @@ class PhotoTest < ActiveSupport::TestCase
   	new = Photo.create(:title => 'newPhotoTitle', :img_url => '/photos/new/testurl.jpg', :display_order => next_display_order, :project => proj_one, :thumb_url => nil)
   	assert !new.errors[:thumb_url].empty?
   end
-  
+
   # Tests regarding prev_photo method
-  
+
   test "returns nil if a photo's previous photo does not exist" do
   	photo = photos(:photo_one)
   	assert_nil photo.prev_photo
@@ -57,9 +57,9 @@ class PhotoTest < ActiveSupport::TestCase
   	photo = photos(:photo_three)
   	assert_equal photo.prev_photo, photos(:photo_one)
   end
-  
+
   # Tests regarding next_photo method
-  
+
   test "returns nil if a photo's next photo does not exist" do
   	photo = photos(:photo_solo)
   	assert_nil photo.next_photo
@@ -68,6 +68,6 @@ class PhotoTest < ActiveSupport::TestCase
   	photo = photos(:photo_one)
   	assert_equal photo.next_photo, photos(:photo_three)
   end
-  
-  
+
+
 end

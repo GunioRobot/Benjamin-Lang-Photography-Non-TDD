@@ -13,28 +13,28 @@ photo_two:
   display_order: 1
   project: proj_two
   thumb_url: /photos/2/thumb_url.jpg
-  
+
 photo_three:
   title: PhotoThreeTitle
   img_url: /photos/3/testurl.jpg
   display_order: 2
   project: proj_one
   thumb_url: /photos/3/thumb_url.jpg
-  
+
 photo_four:
   title: PhotoFourTitle
   img_url: /photos/4/testurl.jpg
   display_order: 6
   project: proj_two
   thumb_url: /photos/4/thumb_url.jpg
-  
+
 photo_five:
   title: PhotoFiveTitle
   img_url: /photos/7/testurl.jpg
   display_order: 3
   project: proj_two
   thumb_url: /photos/7/thumb_url.jpg
-  
+
 photo_six:
   title: PhotoSixTitle
   img_url: /photos/8/testurl.jpg

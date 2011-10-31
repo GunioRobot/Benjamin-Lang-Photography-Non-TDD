@@ -7,15 +7,15 @@ Blp::Application.routes.draw do
 
   get "home/index"
   root :to => 'home#index'
-  
+
   resources :projects do
   	resources :photos
   end
-  
+
   namespace :admin do
   	resources :projects
   end
-  
+
   match '/:name' => 'project_types#show'
   match '/admin/:name' => 'admin/project_types#show'
 

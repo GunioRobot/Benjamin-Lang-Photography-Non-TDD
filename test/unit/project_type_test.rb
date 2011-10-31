@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ProjectTypeTest < ActiveSupport::TestCase
   # Tests regarding existing ProjectType entries
-  
+
   test "First ProjectType has a name" do
     assert_not_nil ProjectType.first.name
   end
@@ -12,9 +12,9 @@ class ProjectTypeTest < ActiveSupport::TestCase
   test "First ProjectType has a display_order" do
     assert_not_nil ProjectType.first.display_order
   end
-  
+
 	# Tests regarding adding new ProjectType entries
-	
+
   test "Adding a ProjectType without a name should fail" do
   	newType = ProjectType.create(:name => nil, :display_order => ProjectType.find(:first, :order => 'display_order DESC').display_order+1)
   	assert !newType.errors[:name].empty?
@@ -31,9 +31,9 @@ class ProjectTypeTest < ActiveSupport::TestCase
   	newType = ProjectType.create(:name => 'new name', :display_order => nil)
   	assert !newType.errors[:display_order].empty?
   end
-  
+
   # Tests regarding full_projects method
-  
+
   test "All resulting projects should have no empty projects" do
   	proj_type = project_types(:film)
   	assert !proj_type.full_projects.empty?
@@ -41,5 +41,5 @@ class ProjectTypeTest < ActiveSupport::TestCase
   		assert !proj.photos.empty?
   	end
   end
-  
+
 end

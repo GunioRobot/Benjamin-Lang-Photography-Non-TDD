@@ -4,7 +4,7 @@ class Photo < ActiveRecord::Base
   validates :display_order, :presence => true
   validates :project_id, :presence => true
   validates :thumb_url, :presence => true
-  
+
   def prev_photo
   	if self.eql?(self.project.display_photos.first)
   		return nil
@@ -13,7 +13,7 @@ class Photo < ActiveRecord::Base
   		return self.project.display_photos.at(prev_index)
   	end
   end
-  
+
   def next_photo
   	if self.eql?(self.project.display_photos.last)
   		return nil
@@ -22,5 +22,5 @@ class Photo < ActiveRecord::Base
   		return self.project.display_photos.at(next_index)
   	end
   end
-  
+
 end

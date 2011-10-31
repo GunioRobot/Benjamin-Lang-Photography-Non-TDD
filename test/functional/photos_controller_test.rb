@@ -34,7 +34,7 @@ class PhotosControllerTest < ActionController::TestCase
     	end
     end
   end
- 
+
   # Conditional view functional tests
   test "should display the photo's title in a span if the title exists" do
   	photo = photos(:photo_one)
@@ -93,5 +93,5 @@ class PhotosControllerTest < ActionController::TestCase
     assert_nil photo.next_photo
     assert_select 'a.prev_next_a', {:text => 'next', :count => 0}
   end
-  
+
 end
